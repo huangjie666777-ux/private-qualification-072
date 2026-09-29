@@ -6,3 +6,9 @@ coverage/
 .env.*
 *.pem
 *.key
+build/
+server-data/
+server-config/*.zkey
+server-config/verification_key.json
+public/circuit/
+public/demo/

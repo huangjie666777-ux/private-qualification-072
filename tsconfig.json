@@ -8,6 +8,7 @@
     ],
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
     "jsx": "react-jsx",
     "strict": true,
     "skipLibCheck": true,
@@ -15,7 +16,11 @@
     "esModuleInterop": true
   },
   "include": [
+    "types/vendor.d.ts",
     "src",
-    "server"
+    "server",
+    "shared",
+    "scripts",
+    "tests"
   ]
 }
