@@ -4,12 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "dev": "vite --host 0.0.0.0 --port 5200 --strictPort",
     "dev:server": "tsx server/index.ts",
     "circom": "circom2",
+    "zk:build": "tsx scripts/buildZk.ts",
+    "credentials:generate": "tsx scripts/generateCredentials.ts",
+    "setup": "npm run zk:build && npm run credentials:generate",
+    "demo:proof": "tsx scripts/demoProof.ts",
     "build": "tsc --noEmit && vite build",
     "test": "vitest run",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0 --port 5201"
   },
   "dependencies": {
     "react": "19.0.0",
